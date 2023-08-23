@@ -6,7 +6,14 @@ import storage from '../storage/index.js';
 import { fetchVersion, getVersion } from '../utils/index.js';
 
 const app = express();
-
+let config = {
+  method: 'get',
+  url: apiEndPt,
+  headers: {
+    Authorization: 'Bearer ' + vercelToken,
+  },
+};
+let results = [];
 app.use(express.json({
   verify: (req, res, buf) => {
     req.rawBody = buf.toString();
