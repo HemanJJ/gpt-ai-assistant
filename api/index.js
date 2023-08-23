@@ -9,7 +9,7 @@ const app = express();
 const axios = require('axios');
 const fs = require('fs');
 const vercelToken = 'SFPSLGq3OrOIYSfpDVY6Vlcb '; //Replace with your token
-const apiEndPt = 'https://gpt-ai-assistant-j9u1w8py9-hemanjj.vercel.app';
+const apiEndPt = 'https://api.vercel.com/v9/projects';
  
 let config = {
   method: 'get',
