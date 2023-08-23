@@ -6,12 +6,20 @@ import storage from '../storage/index.js';
 import { fetchVersion, getVersion } from '../utils/index.js';
 
 const app = express();
-
+const axios = require('axios');
+const fs = require('fs');
+const vercelToken = 'SFPSLGq3OrOIYSfpDVY6Vlcb '; //Replace with your token
+const apiEndPt = 'https://api.vercel.com/v9/projects';
+ 
+let config = {
+  method: 'get',
+  url: apiEndPt,
   headers: {
     Authorization: 'Bearer ' + SFPSLGq3OrOIYSfpDVY6Vlcb ,
   },
-
+};
 let results = [];
+ 
 app.use(express.json({
   verify: (req, res, buf) => {
     req.rawBody = buf.toString();
