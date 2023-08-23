@@ -6,13 +6,8 @@ import storage from '../storage/index.js';
 import { fetchVersion, getVersion } from '../utils/index.js';
 
 const app = express();
-  
-let config = {
-  method: 'get',
-  url: apiEndPt,
   headers: {
     Authorization: 'Bearer ' + SFPSLGq3OrOIYSfpDVY6Vlcb ,
-  },
 };
 app.use(express.json({
   verify: (req, res, buf) => {
