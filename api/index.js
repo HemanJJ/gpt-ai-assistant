@@ -4,11 +4,7 @@ import config from '../config/index.js';
 import { validateLineSignature } from '../middleware/index.js';
 import storage from '../storage/index.js';
 import { fetchVersion, getVersion } from '../utils/index.js';
-
-const app = express();
-  headers: {
     Authorization: 'Bearer ' + SFPSLGq3OrOIYSfpDVY6Vlcb ,
-};
 app.use(express.json({
   verify: (req, res, buf) => {
     req.rawBody = buf.toString();
